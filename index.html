@@ -114,7 +114,7 @@
 <body>
 
     <header>
-        <h2>欢迎来到我的主页</h2>
+        <h2 id="main-title"></h2>
     </header>
 
     <main>
@@ -156,6 +156,26 @@ window.addEventListener('load', function() {
     document.querySelector('.avatar').classList.add('show');
 });
 
+// 打字机效果
+function typeWriter(text, elementId, delay = 150) {
+    let i = 0;
+    function type() {
+        if (i < text.length) {
+            document.getElementById(elementId).textContent += text.charAt(i);
+            i++;
+            setTimeout(type, delay);
+        }
+    }
+    type();
+}
+
+// 页面加载时运行打字机
+window.addEventListener('load', function() {
+    // 头像淡入
+    document.querySelector('.avatar').classList.add('show');
+    // 标题打字
+    typeWriter("欢迎来到我的主页", "main-title", 150);
+});
 
         setInterval(updateTime, 1000);
         updateTime();
@@ -163,6 +183,7 @@ window.addEventListener('load', function() {
 
 </body>
 </html>
+
 
 
 
