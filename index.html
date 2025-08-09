@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的个人主页</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+            color: #333;
+        }
+
+        header {
+            background-color: #00838f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        main {
+            padding: 40px;
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        img.avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: -80px;
+            border: 4px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #006064;
+            margin: 15px 0 5px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        #time {
+            font-size: 14px;
+            color: #00838f;
+            margin: 10px 0 20px;
+        }
+
+        a.button, button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px 20px;
+            background-color: #00838f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 16px;
+            width: 80%;
+        }
+
+        a.button:hover, button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>欢迎来到我的主页</h2>
+    </header>
+
+    <main>
+        <!-- 头像 -->
+       <img src="myphoto.jpg" alt="头像" class="avatar">
+
+        <!-- 姓名 -->
+        <h1>张鹏</h1>
+        <p>建筑师 / AI学习者 / 未来Web开发者</p>
+
+        <!-- 当前时间 -->
+        <div id="time"></div>
+
+        <!-- 按钮链接 -->
+        <a href="https://www.baidu.com" target="_blank" class="button">我的作品集</a>
+        <a href="https://weixin.qq.com" target="_blank" class="button">联系我（微信）</a>
+        <a href="mailto:example@email.com" class="button">给我发邮件</a>
+
+        <!-- 互动按钮 -->
+        <button onclick="sayHello()">点我打招呼</button>
+    </main>
+
+    <script>
+        // 打招呼
+        function sayHello() {
+            alert("你好！很高兴认识你 🎉");
+        }
+
+        // 时间显示
+        function updateTime() {
+            const now = new Date();
+            const formatted = now.toLocaleString();
+            document.getElementById("time").textContent = "当前时间：" + formatted;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+
+</body>
+</html>
