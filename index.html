@@ -75,6 +75,27 @@
         a.button:hover, button:hover {
             background-color: #004d40;
         }
+/* 手机端适配：屏幕宽度 <= 600px 时生效 */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+        max-width: 90%;
+    }
+    img.avatar {
+        width: 100px;
+        height: 100px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    a.button, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
     </style>
 </head>
 <body>
@@ -101,6 +122,7 @@
 
         <!-- 互动按钮 -->
         <button onclick="sayHello()">点我打招呼</button>
+        <p id="version" style="color:#999; font-size:12px; margin-top:30px;">版本：1.0.0</p>
     </main>
 
     <script>
