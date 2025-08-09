@@ -151,10 +151,11 @@
             document.getElementById("time").textContent = "当前时间：" + formatted;
         }
 
-        // 页面加载完成后，让头像淡入
-        window.addEventListener('load', function() {
-        document.querySelector('.avatar').classList.add('show');
-}
+// 页面加载完成后，让头像淡入
+window.addEventListener('load', function() {
+    document.querySelector('.avatar').classList.add('show');
+});
+
 
         setInterval(updateTime, 1000);
         updateTime();
@@ -162,6 +163,7 @@
 
 </body>
 </html>
+
 
 
 
