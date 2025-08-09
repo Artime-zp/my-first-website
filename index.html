@@ -42,6 +42,14 @@
             margin-top: -80px;
             border: 4px solid white;
             box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            opacity: 0; /* 初始不可见 */
+            transition: opacity 1.5s ease; /* 渐变时间1.5秒 */
+}
+
+/* 进入可见状态 */
+.avatar.show {
+    opacity: 1;
+}
         }
 
         h1 {
@@ -143,12 +151,18 @@
             document.getElementById("time").textContent = "当前时间：" + formatted;
         }
 
+        // 页面加载完成后，让头像淡入
+        window.addEventListener('load', function() {
+        document.querySelector('.avatar').classList.add('show');
+}
+
         setInterval(updateTime, 1000);
         updateTime();
     </script>
 
 </body>
 </html>
+
 
 
 
