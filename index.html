@@ -140,6 +140,26 @@
         flex-direction: column;
     }
 }
+/* 技能标签样式 */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+}
+
+.tags span:hover {
+    filter: brightness(85%);
+}
+
 
     </style>
 </head>
@@ -173,15 +193,16 @@
         <h3>个人简介</h3>
         <p>我是一名建筑师，热爱设计与创新。正在学习人工智能与Web开发，希望将技术与创意结合，做出有趣又实用的项目。</p>
     </div>
-    <div class="column">
-        <h3>技能标签</h3>
-        <ul>
-            <li>建筑设计</li>
-            <li>AI 应用探索</li>
-            <li>HTML / CSS</li>
-            <li>GitHub 部署</li>
-        </ul>
+<div class="column">
+    <h3>技能标签</h3>
+    <div class="tags">
+        <span>建筑设计</span>
+        <span>AI 应用探索</span>
+        <span>HTML / CSS</span>
+        <span>GitHub 部署</span>
     </div>
+</div>
+
 </section>
 
         <p id="version" style="color:#999; font-size:12px; margin-top:30px;">版本：1.0.0</p>
@@ -232,6 +253,7 @@ window.addEventListener('load', function() {
 
 </body>
 </html>
+
 
 
 
